@@ -80,10 +80,5 @@ The app works and was already tested by clinicians. Based on their advices, I wi
 - **Side-view joint angles:** with the child filmed from the side, calculate knee and hip flexion over the walking cycle. Joint angles from a single camera are only meaningful in the plane facing it, so these will need a standard side-view recording.
 - **Saved sessions:** store results per patient and compare sessions over time, for example before and after a course of exercises.
 
-
-
-#### Comparing model settings
-
-I compared two configurations on the same set of videos: **balanced on CPU** and **performance on GPU (CUDA)**.
-
-Future work: Step detection, cadence, symmetry metrics, clinician feedback, side-view joint angles.
+- **Side-view joint angles:** with the child filmed from the side, calculate knee and hip flexion over the walking cycle. Joint angles from a single camera are only meaningful in the plane facing it, so these will need a standard side-view recording.
+- **Saved sessions:** store results per patient and compare sessions over time, for example before and after a course 
