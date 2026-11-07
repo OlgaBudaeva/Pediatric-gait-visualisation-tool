@@ -24,7 +24,7 @@ The output looks like this:
 
 Here's a quick demonstartion of the app:
 
-[demonstration](docs/app_demonstration.mov)
+https://github.com/user-attachments/assets/469aa93b-4e6f-4010-9f4e-7ca49b612e33
 
 The left panel is blured for privacy reasons. Normally, there is an original vieo overlayed with the skeleton that is shown on the right panel. It is used for observing whether the keypoints are placed right.
 
