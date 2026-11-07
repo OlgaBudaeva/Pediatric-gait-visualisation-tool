@@ -66,4 +66,24 @@ I then moved to **RTMW**, a whole-body pose model, run through the rtmlib librar
 
 I compared two configurations on the same set of videos: **balanced on CPU** and **performance on GPU (CUDA)**.
 
+- **Speed:** processing time was similar. The mean was about 51 s for balanced/CPU and 58 s for performance/GPU, so the GPU gave no end-to-end speedup. Most of the pipeline (video decoding, smoothing, rendering and encoding) runs on the CPU, so it likely limits the total time.
+- **Accuracy:** on one clip, body keypoints differed by about 1.5% of torso length and foot keypoints by about 2.8%. Performance showed about 26% less frame-to-frame noise.
+
+The visible differences were small, so I chose balanced on CPU. It's faster and easy to deploy.
+
+## Future work
+
+The app works and was already tested by clinicians. Based on their advices, I will add next features:
+
+- **Step detection and cadence:** detect individual steps from the ankle and heel trajectories and calculate how many steps per minute the child takes.
+- **Symmetry metrics:** compare left and right sides (step timing, limb movement, arm swing) and show the result as a simple number or chart next to the visualisation. This would back up what the trails already show visually.
+- **Side-view joint angles:** with the child filmed from the side, calculate knee and hip flexion over the walking cycle. Joint angles from a single camera are only meaningful in the plane facing it, so these will need a standard side-view recording.
+- **Saved sessions:** store results per patient and compare sessions over time, for example before and after a course of exercises.
+
+
+
+#### Comparing model settings
+
+I compared two configurations on the same set of videos: **balanced on CPU** and **performance on GPU (CUDA)**.
+
 Future work: Step detection, cadence, symmetry metrics, clinician feedback, side-view joint angles.
